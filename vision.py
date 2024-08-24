@@ -22,7 +22,7 @@ def get_gemini_response(input,image):
 
 st.set_page_config(page_title="Image Demo")
 
-st.header("Gemini Application")
+st.header("Gemini LLM Application")
 
 input=st.text_input("Input prompt: ",key="input")
 upload_file=st.file_uploader("Choose An Image...", type=["jpg","jpeg","png"])
@@ -37,5 +37,5 @@ submit=st.button("Tell me about image")
 
 if submit:    
     response=get_gemini_response(input,image)
-    st.subheader("The Reason is")
+    st.subheader("The Response is")
     st.write(response)
